@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/Home.css') }}">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="left-navbar">
+            <img src="{{ url_for('static', filename = 'images/logo.svg') }}" alt="" class="navbar-logo">
+            <div class="navbar-logo-text">Gesture Based<br />Image Analysis</div>
+        </div>
+        <div class="middle-navbar">
+            <div class="college-text">Dr. N. G. P. Institute of Technology</div>
+        </div>
+        <div class="right-navbar">
+            <div class="navbar-link active">Home</div>
+            <div class="navbar-link">About</div>
+            <div class="navbar-link">Contact</div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="sub-container">
+            <div class="container-1 hidden">
+                <div class="sub-container-header">Webcam Live Feed</div>
+                <div class="sub-container-text">Show the numbers using hand gestures to the webcam</div>
+                <div class="sub-container-grid">
+                    <div class="live-video video">
+                        <video autoplay="true" id="video-container"></video>
+                    </div>
+                    <div class="hand-gesture-prediction rings-container">
+                        <!-- <div class="ring ring-content">
+                            &infin;
+                        </div>
+                        <div class="ring"></div>
+                        <div class="ring"></div>
+                        <div class="ring"></div>
+                        <div class="ring"></div>
+                        <div class="ring"></div>
+                        <div class="ring"></div>
+                        <div class="ring"></div> -->
+                        <img class="image-viewer" src="" alt="#">
+                    </div>
+                </div>
+            </div>
+            <div class="container-2">
+                <div class="sub-container-header">Upload Images</div>
+                <div class="sub-container-text">Press the below Button and Upload multiple Images to Continue</div>
+                <div class="sub-container-upload-image">
+                    <div class="sub-container-image-container">
+                        <div class="sub-container-image-text">Select Multiple Images</div>
+                        <input id="files" type="file" multiple="multiple" accept="image/jpeg,image/png,image/jpg" />
+                        <output id="result"></output>
+                        <div class="sub-container-start-btn">Start</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="copyright-text">&copy; Copyrights 2022-23</div>
+        <div class="develeper-text">
+            This webpage is designed & developed by J.Ajay, R.Agasthiya, A.Amrith Gold & D.Chandru of Dr. N. G. P.
+            Institute Of Technology
+        </div>
+    </div>
+</body>
+<script src="{{ url_for('static', filename = 'js/socket.io.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/Home.js') }}"></script>
+
+</html>

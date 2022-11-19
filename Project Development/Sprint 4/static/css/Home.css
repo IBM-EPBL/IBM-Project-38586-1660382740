@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(237, 234, 222);
+}
+
+.navbar {
+    height: 15%;
+}
+
+.navbar-logo {
+    height: 75px;
+    width: 75px;
+}
+
+.navbar {
+    padding: 10px 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.navbar-logo-text {
+    line-height: 2rem;
+}
+
+.navbar,
+.navbar * {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-navbar {
+    font-size: 1.6rem;
+    gap: 10px;
+}
+
+.middle-navbar {
+    font-size: 1.75rem;
+}
+
+.right-navbar {
+    font-size: 1.25rem;
+    gap: 5px;
+}
+
+.navbar-link {
+    padding: 7px 15px;
+}
+
+.navbar-link.active,
+.navbar-link:hover {
+    cursor: pointer;
+    background-color: rgba(5, 117, 165, 255);
+    color: white;
+    border-radius: 5px;
+}
+
+.main-container {
+    padding: 20px 10px;
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.sub-container-header {
+    font-size: 1.75rem;
+}
+
+.sub-container-text {
+    font-size: 1.1rem;
+}
+
+.sub-container-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    width: 100%;
+    height: 450px;
+    grid-gap: 20px;
+}
+
+.sub-container-grid>* {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+
+.sub-container-upload-image {
+    width: 100%;
+    height: 450px;
+}
+
+.sub-container-image-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.image-viewer {
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+}
+
+.sub-container-image-text {
+    margin-bottom: 20px;
+}
+
+.hand-gesture-prediction {
+    overflow: hidden;
+}
+
+.zoomIn {
+    transform: scale(1.5);
+}
+
+.blurIn {
+    filter: blur(0.5rem);
+}
+
+.flip {
+    transform: scaleY(-1);
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+#video-container {
+    width: 575px;
+}
+
+.sub-container-image-text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-container-start-btn {
+    margin-top: 50px;
+    padding: 10px 30px;
+    font-size: 1.2em;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    border-radius: 10%;
+}
+
+.container-1,
+.container-2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.sub-container-start-btn:hover {
+    cursor: pointer;
+}
+
+.rings-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    animation: ring-animation-out 0.4s linear forwards;
+}
+
+.ring.active {
+    animation: ring-animation-in 0.4s linear forwards;
+}
+
+.ring-content {
+    font-size: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 69, 0);
+}
+
+.ring:nth-child(1) {
+    width: 110px;
+    height: 110px;
+    animation: none;
+}
+
+.ring:nth-child(2) {
+    width: 150px;
+    height: 150px;
+}
+
+.ring:nth-child(3) {
+    width: 190px;
+    height: 190px;
+}
+
+.ring:nth-child(4) {
+    width: 230px;
+    height: 230px;
+}
+
+.ring:nth-child(5) {
+    width: 270px;
+    height: 270px;
+}
+
+.ring:nth-child(6) {
+    width: 310px;
+    height: 310px;
+}
+
+.ring:nth-child(7) {
+    width: 350px;
+    height: 350px;
+}
+
+.ring:nth-child(8) {
+    width: 390px;
+    height: 390px;
+}
+
+@keyframes ring-animation-in {
+    0% {
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    10% {
+        border-color: rgb(255, 69, 0);
+    }
+
+    100% {
+        border: 20px solid rgb(255, 69, 0);
+    }
+}
+
+
+@keyframes ring-animation-out {
+    0% {
+        border: 20px solid rgb(255, 69, 0);
+    }
+
+    90% {
+        border-color: rgba(0, 0, 0, 0.3);
+    }
+
+    100% {
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+
+}
